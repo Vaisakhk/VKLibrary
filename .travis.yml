@@ -9,4 +9,4 @@ env:
 script:
   - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project VKLibrary.xcodeproj -scheme VKLibrary -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
 after_success:
-bash <(curl -s https://codecov.io/bash) -t {ef0c64c7-1a05-4f48-9cb3-06cb2f86b866}
+bash <(curl -s https://codecov.io/bash) -t "ef0c64c7-1a05-4f48-9cb3-06cb2f86b866"
