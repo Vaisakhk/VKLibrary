@@ -1,6 +1,6 @@
 language: objective-c
 
-osx_image: xcode10.1
+osx_image: xcode12.2
 env:
   matrix:
     - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone XR'
@@ -8,8 +8,7 @@ env:
 
 script:
   - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project VKLibrary.xcodeproj -scheme VKLibrary -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
-#after_success:
-#bash <(curl -s https://codecov.io/bash) -t "ef0c64c7-1a05-4f48-9cb3-06cb2f86b866"
+
 after_success:
   - slather
   - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
