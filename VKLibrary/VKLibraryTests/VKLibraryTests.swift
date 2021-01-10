@@ -10,24 +10,21 @@ import XCTest
 
 class VKLibraryTests: XCTestCase {
 
+    var vkLibrary: VKLibrary!
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        vkLibrary = VKLibrary()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAdd() {
+        let result = vkLibrary.add(a: 7, b: 7)
+        XCTAssertTrue(result == 14)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testSub() {
+        let result = vkLibrary.sub(a: 7, b: 7)
+        XCTAssertTrue(result == 0)
     }
-
 }

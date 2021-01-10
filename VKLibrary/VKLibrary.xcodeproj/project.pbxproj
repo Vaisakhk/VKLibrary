@@ -16,6 +16,7 @@
 		CE16806225AAC7B5009C54D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE16806025AAC7B5009C54D8 /* Main.storyboard */; };
 		CE16806425AAC7B9009C54D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE16806325AAC7B9009C54D8 /* Assets.xcassets */; };
 		CE16806725AAC7B9009C54D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE16806525AAC7B9009C54D8 /* LaunchScreen.storyboard */; };
+		CE16807325AACE97009C54D8 /* VKLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16807225AACE97009C54D8 /* VKLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		CE16806325AAC7B9009C54D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE16806625AAC7B9009C54D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE16806825AAC7B9009C54D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE16807225AACE97009C54D8 /* VKLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				CE16803925AA9C1B009C54D8 /* VKLibrary.h */,
 				CE16803A25AA9C1B009C54D8 /* Info.plist */,
+				CE16807225AACE97009C54D8 /* VKLibrary.swift */,
 			);
 			path = VKLibrary;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				TargetAttributes = {
 					CE16803525AA9C1B009C54D8 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					CE16803E25AA9C1B009C54D8 = {
 						CreatedOnToolsVersion = 12.2;
@@ -262,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE16807325AACE97009C54D8 /* VKLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +443,7 @@
 		CE16804B25AA9C1B009C54D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6C4569BGYW;
@@ -455,6 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CL.VKLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,6 +470,7 @@
 		CE16804C25AA9C1B009C54D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6C4569BGYW;
@@ -488,9 +496,11 @@
 		CE16804E25AA9C1B009C54D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C4569BGYW;
 				INFOPLIST_FILE = VKLibraryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,9 +516,11 @@
 		CE16804F25AA9C1B009C54D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C4569BGYW;
 				INFOPLIST_FILE = VKLibraryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C4569BGYW;
 				INFOPLIST_FILE = VKLibraryExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,6 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C4569BGYW;
 				INFOPLIST_FILE = VKLibraryExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
