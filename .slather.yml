@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: VKLibrary.xcodeproj
+scheme: VKLibrary
+output_directory: reports
+ignore:
+  - VKLibraryTests/*
