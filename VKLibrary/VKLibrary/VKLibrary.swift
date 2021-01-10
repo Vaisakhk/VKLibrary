@@ -12,6 +12,7 @@ public final class VKLibrary {
 
     let name = "VKLibrary"
     
+    
     public func add<T:Numeric>(a: T, b: T) -> T {
         return a + b
     }
